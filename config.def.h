@@ -8,5 +8,14 @@ static const char *colorname[NUMCOLS] = {
 	[FAILED] = "#CC3333",   /* wrong password */
 };
 
+/*
+ * Xresources preferences to load at startup
+ */
+ResourcePref resources[] = {
+  { "black",      STRING,  &colorname[INIT] },
+  { "color6",     STRING,  &colorname[INPUT] },
+  { "#CC3333",    STRING,  &colorname[FAILED] },
+};
+
 /* treat a cleared input like a wrong password (color) */
 static const int failonclear = 1;
